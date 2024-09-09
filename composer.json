@@ -8,6 +8,16 @@
             "email": "rosyidiyuekunchen@gmail.com"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "ProgrammerZamanNow\\Belajar\\PHP\\MVC\\": "app"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "ProgrammerZamanNow\\Belajar\\PHP\\MVC\\": "tests"
+      }
+    },
     "require": {
       "php": ">=8.0"
     },
