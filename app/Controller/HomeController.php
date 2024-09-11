@@ -18,4 +18,9 @@
     {
       echo "HomeController.world()";
     }
+
+    function about(): void
+    {
+      echo "Author, Eko Kurniawan Khannedy";
+    }
   }
