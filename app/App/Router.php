@@ -29,6 +29,11 @@
         {
           $controller = new $route['controller'];
           $function = $route['function'];
+          foreach($route['middlewares'] as $middleware)
+          {
+            $instance = new $middleware;
+            $instance->before();
+          }
           array_shift($variables);
           call_user_func_array([$controller, $function], $variables);
           return;
