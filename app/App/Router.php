@@ -28,7 +28,8 @@
         {
           $controller = new $route['controller'];
           $function = $route['function'];
-          $controller->$function();
+          array_shift($variables);
+          call_user_func_array([$controller, $function], $variables);
           return;
         }
       }
