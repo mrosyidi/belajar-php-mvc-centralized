@@ -6,13 +6,14 @@
   {
     private static array $routes = [];
 
-    public static function add(string $method, string $path, string $controller, string $function): void
+    public static function add(string $method, string $path, string $controller, string $function, array $middlewares = []): void
     {
       self::$routes[] = [
         'method' => $method,
         'path' => $path,
         'controller' => $controller,
-        'function' => $function
+        'function' => $function,
+        'middlewares' => $middlewares
       ];
     }
 
